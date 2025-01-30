@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+header {
+  position: fixed; /* Keeps the header fixed at the top */
+  top: 0; /* Positions it at the top */
+  left: 0; /* Aligns it to the left */
+  width: 100%; /* Makes it span the full width */
+  color: white; /* White text */
+  padding: 15px 0; /* Space above and below */
+  text-align: center; /* Centers text */
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 70px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+section {
+  padding: 20px;
+  text-align: center;
+
+  color: ghostwhite;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+header,
+section,
+footer {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+@keyframes backgroundSlide {
+  0% {
+    background-image: url("image/my1.jpeg");
+  }
+  20% {
+    background-image: url("image/kyz.jpeg");
+  }
+  39% {
+    background-image: url("image/my2.jpeg");
+  }
+  66% {
+    background-image: url("image/my3.jpeg");
+  }
+  100% {
+    background-image: url("image/my4.jpeg");
+  }
+}
+
+/* Sliding Background */
+.sliding-background {
+  position: absolute; /* Make sure it’s positioned behind content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: backgroundSlide 30s infinite; /* Updated to 10s for better slide effect */
+  z-index: -1; /* Ensure it stays behind other content */
+}
